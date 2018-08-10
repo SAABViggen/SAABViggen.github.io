@@ -219,8 +219,8 @@ $(document).ready(function() {
   }
 
   $('[data-task-add-form]').on('submit', handleTaskSubmitRequest);
-  $('[data-task-search-form]').on('submit', getAllTasks);
-  $('[data-task-search-form]').on('submit', handleTaskSearchRequest);
+  $('[data-task-search-form]').on('submit', '[data-task-search-button]', handleTaskSearchRequest);
+  $('[data-task-search-form]').on('click', '[data-task-search-all-button]', getAllTasks);
 
   $tasksContainer.on('change','[data-board-name-select]', handleBoardNameSelect);
   $tasksContainer.on('click','[data-trello-card-creation-trigger]', handleCardCreationRequest);
